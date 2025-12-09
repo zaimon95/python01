@@ -16,7 +16,7 @@ class Plant:
         return f"{self.name}: {self.height}cm, {self.days} days old"
 
 
-def ft_plant_growth():
+if __name__ == "__main__":
     p1 = Plant("Rose", 25, 30)
     growth: int = 0
     print("=== Day 1 ===")
@@ -27,7 +27,3 @@ def ft_plant_growth():
     print("=== Day 7 ===")
     print(p1.get_info())
     print(f"Growth this week: +{growth}cm")
-
-
-if __name__ == "__main__":
-    ft_plant_growth()
