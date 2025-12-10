@@ -21,9 +21,12 @@ if __name__ == "__main__":
     growth: int = 0
     print("=== Day 1 ===")
     print(p1.get_info())
-    for i in range(6):
-        growth += 1
-        p1.age()
     print("=== Day 7 ===")
+    p1.age()
+    p1.age()
+    p1.age()
+    p1.age()
+    p1.age()
+    p1.age()
     print(p1.get_info())
     print(f"Growth this week: +{growth}cm")
