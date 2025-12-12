@@ -2,7 +2,7 @@
 
 
 class Plant:
-    def __init__(self, name, height, age)-> None:
+    def __init__(self, name, height, age) -> None:
         self.name = name
         self.height = height
         self.age = age
