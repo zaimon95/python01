@@ -37,6 +37,13 @@ class Flower(Plant):
         """Print a message saying the flower blooms."""
         print(f"{self.name} is blooming beatifully!")
 
+    def print_flower(self) -> None:
+        """Print what is needed for a flower."""
+        print(f"{rose.name} ({type(rose).__name__}):", end=" ")
+        print(f"{rose.height}cm, {rose.age} days, {rose.color} color")
+        self.bloom()
+        print()
+
 
 class Tree(Plant):
     """A type of plant that is actually a tree."""
@@ -55,8 +62,16 @@ class Tree(Plant):
 
     def produce_shade(self) -> None:
         """Print the surface of the shade the tree will produce."""
-        shade: int = self.height * self.trunk_diameter
+        shade: int = (self.height * self.trunk_diameter) // 1000
         print(f"{self.name} provides {shade} square meters of shade")
+
+    def print_tree(self) -> None:
+        """Print the explanation of the tree."""
+        print(f"{self.name} ({type(self).__name__}):", end=" ")
+        print(f"{self.height}cm, {self.age} days,", end=" ")
+        print(f"{self.trunk_diameter}cm diameter")
+        self.produce_shade()
+        print()
 
 
 class Vegetable(Plant):
@@ -78,6 +93,20 @@ class Vegetable(Plant):
         self.harvest_season = harvest_season
         self.nutritional_value = nutritional_value
 
-    def nutrition(self) -> None:
-        """Print what nutritional value the vegetable gives."""
+    def print_veg(self) -> None:
+        """Print what is needed for a vegetable."""
+        print(f"{self.name} ({type(self).__name__}):", end=" ")
+        print(f"{self.height}cm, {self.age} days,", end=" ")
+        print(f"{self.harvest_season} harvest")
         print(f"{self.name} is rich in {self.nutritional_value}")
+        print()
+
+
+if __name__ == "__main__":
+    print("=== Garden Plant Types ===\n")
+    rose = Flower("Rose", 25, 30, "red")
+    rose.print_flower()
+    oak = Tree("Oak", 500, 1825, 50)
+    oak.print_tree()
+    tomato = Vegetable("Tomato", 80, 90, "summer", "vitamin C")
+    tomato.print_veg()
