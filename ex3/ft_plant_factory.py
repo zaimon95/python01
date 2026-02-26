@@ -10,6 +10,7 @@ class Plant:
     def __str__(self) -> str:
         return f"Created: {x.name} ({x.height}cm, {x.days} days)"
 
+
 if __name__ == "__main__":
     print("=== Plant Factory Output ===")
     rose = Plant("Rose", 25, 30)
