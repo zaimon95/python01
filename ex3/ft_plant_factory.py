@@ -7,6 +7,8 @@ class Plant:
         self.height = height
         self.days = days
 
+    def __str__(self) -> str:
+        return f"Created: {x.name} ({x.height}cm, {x.days} days)"
 
 if __name__ == "__main__":
     print("=== Plant Factory Output ===")
@@ -17,5 +19,5 @@ if __name__ == "__main__":
     fern = Plant("Fern", 15, 120)
     plants = [rose, oak, cactus, sunflower, fern]
     for x in plants:
-        print(f"Created: {x.name} ({x.height}cm, {x.days} days)")
+        print(x)
     print(f"\nTotal plants created {len(plants)}")
