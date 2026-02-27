@@ -3,7 +3,7 @@
 
 class Plant:
 
-    def __init__(self, name, height, days) -> None:
+    def __init__(self, name: str, height: int, days: int) -> None:
         self.name = name
         self.height = height
         self.days = days
@@ -35,5 +35,5 @@ if __name__ == "__main__":
                 print(plant.get_info())
             plant.age()
             growth += 1
-            if i == 6:
-                print(f"Growth this week: +{growth}cm")
+            if i == 7:
+                print(f"Growth this week: +{growth - 1}cm")

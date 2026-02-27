@@ -2,13 +2,13 @@
 
 
 class Plant:
-    def __init__(self, name, height, days):
+    def __init__(self, name: str, height: int, days: int):
         self.name = name
         self.height = height
         self.days = days
 
     def __str__(self) -> str:
-        return f"Created: {x.name} ({x.height}cm, {x.days} days)"
+        return f"Created: {self.name} ({self.height}cm, {self.days} days)"
 
 
 if __name__ == "__main__":
